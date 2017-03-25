@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -344,7 +344,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416086, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 416086, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
       propertyPath: m_LocalPosition.z
@@ -370,9 +370,81 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 54219061770527832, guid: 1a2afe25e45b44f46a8e7714bffe1028,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54219061770527832, guid: 1a2afe25e45b44f46a8e7714bffe1028,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455792, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.37936744
+      objectReference: {fileID: 0}
+    - target: {fileID: 455792, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.34334365
+      objectReference: {fileID: 0}
+    - target: {fileID: 476684, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.3453208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475663914278692, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.92773503
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683641130144494, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.9315634
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562109027086432, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.9304228
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016160330138520, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.93222946
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518902621907368, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.9304263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259317118487784, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.9277315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889231385869566, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.92531246
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169911552173664, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.9343929
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &742803533 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144364, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+  m_PrefabInternal: {fileID: 730839394}
+--- !u!64 &742803603
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 742803533}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 2bac320ccd086cf4dad5387339c32be6, type: 3}
 --- !u!1 &935190001 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100026, guid: 575a9f5d3bb64d64ab391580205dfc95, type: 3}
