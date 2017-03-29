@@ -21,7 +21,7 @@ namespace Leap.Unity {
     [MinValue(0)]
     [Units("meters")]
     [FormerlySerializedAs("_deactivatePinchDist")]
-    public float DeactivateDistance = .04f; //meters
+    public float DeactivateDistance = .03f; //meters
 
     public bool IsPinching { get { return this.IsHolding; } }
     public bool DidStartPinch { get { return this.DidStartHold; } }

@@ -4867,7 +4867,7 @@ MonoBehaviour:
   ControlsTransform: 1
   ShowGizmos: 1
   ActivateDistance: 0.03
-  DeactivateDistance: 0.04
+  DeactivateDistance: 0.03
 --- !u!4 &1064694462
 Transform:
   m_ObjectHideFlags: 0
@@ -5198,7 +5198,7 @@ MonoBehaviour:
   ControlsTransform: 1
   ShowGizmos: 1
   ActivateDistance: 0.03
-  DeactivateDistance: 0.04
+  DeactivateDistance: 0.03
 --- !u!1 &1183483315
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,12 +5502,12 @@ Prefab:
     - target: {fileID: 64994114196353694, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64994114196353694, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
@@ -5525,11 +5525,21 @@ Prefab:
     - target: {fileID: 65238039366876360, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
       propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64994114196353694, guid: abd1280d95c2a224795e8c90a16e3c4d,
+        type: 2}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7146,6 +7156,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 575a9f5d3bb64d64ab391580205dfc95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 575a9f5d3bb64d64ab391580205dfc95, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
