@@ -15,11 +15,6 @@ using Leap;
  * 
  * It uses Unity's inverse kinematics system to position the avatar's hands
  * where they should be.
- * 
- * Requires: Unity PRO 4.5+, LEAP 2.0
- * 
- * Author: Ivan Bindoff (@vanmani)
- * Some parts adapted from HandController provided LEAP Unity asset.
  * */
 namespace LeapAvatarHands
 {

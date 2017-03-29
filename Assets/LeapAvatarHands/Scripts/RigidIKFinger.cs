@@ -4,9 +4,7 @@ using Leap.Unity;
 
 /**
 A basic RigidFinger for use with the IK solution. Makes physics work.
-
-    Author: Ivan Bindoff
-    */
+*/
 
 namespace LeapAvatarHands
 {

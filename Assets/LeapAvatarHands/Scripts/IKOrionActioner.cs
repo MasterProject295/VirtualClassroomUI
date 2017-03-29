@@ -1,8 +1,6 @@
 ﻿/**
 IKOrionActioner for Leap motion Orion
 Forwards the IK pass from the root transform's animator up to the IKOrionLeapHandController
-
-Author: Ivan Bindoff
 */
 
 using UnityEngine;

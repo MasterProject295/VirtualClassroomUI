@@ -2,8 +2,6 @@
 IKOrionLeapHandController
 Extends the Leap Motion orion "LeapHandController" class to enable the use of a game avatar characters
 own hands instead of disembodied virtual hands when using the Leap Motion controller.
-
-Author: Ivan Bindoff
 */
 
 using UnityEngine;

@@ -2,8 +2,6 @@
 Matches the rotation and position of the transform this script is on with an external transform.
 
 Intended for use with Neck transforms on avatars that are driven by a VR headset.
-
-Author: Ivan Bindoff
 */
 
 using UnityEngine;

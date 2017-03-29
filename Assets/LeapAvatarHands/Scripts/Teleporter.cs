@@ -4,8 +4,6 @@ Set the rayTransform to be your "pointing at" transform (usually the camera, so 
 you're looking). Then set up the mask to only work on your Floor objects (however you've tagged those).
 
 Set up a Leap gesture or other trigger to fire the TeleportTo() method, in the manner of your choosing.
-
-Author: Ivan Bindoff
 */
 
 using UnityEngine;
