@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 124991065889745062}
   - component: {fileID: 81466247458974864}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Student
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 114344016254764646}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Capsule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,11 +392,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858509195509110}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d3934968fa4822409e42fbe0ef82d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ad53e6382252a94f887be04bcc3f15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_LastSendTime: 0
+  m_SyncVarGuard: 0
+  m_MyView: {fileID: 0}
 --- !u!114 &114441812586401626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,7 +418,7 @@ MonoBehaviour:
   UseUnityRemoteInput: 0
   screenSize: 0
   viewerType: 1
-  stereoScreenScale: 1
+  stereoScreenScale: 1.27
 --- !u!114 &114515397056845824
 MonoBehaviour:
   m_ObjectHideFlags: 1
