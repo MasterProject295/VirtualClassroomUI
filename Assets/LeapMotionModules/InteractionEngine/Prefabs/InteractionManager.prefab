@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 476458}
-  - 114: {fileID: 11435054}
+  - component: {fileID: 476458}
+  - component: {fileID: 11435054}
   m_Layer: 0
   m_Name: InteractionManager
   m_TagString: Untagged
@@ -22,13 +22,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3600006, y: -0.39, z: -1.9599915}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11435054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48,8 +48,7 @@ MonoBehaviour:
   _brushGroupName: BrushHands
   _contactEnabled: 1
   _graspingEnabled: 1
-  _depthUntilSphericalInside: 0.023
-  _activationRadius: 0.15
+  _activationRadius: 0.3
   _maxActivationDepth: 3
   _autoGenerateLayers: 1
   _templateLayer:
@@ -60,9 +59,9 @@ MonoBehaviour:
     layer: 9
   _brushLayer:
     layer: 10
-  _automaticValidation: 0
-  _showDebugLines: 0
-  _showDebugOutput: 0
+  _automaticValidation: 1
+  _showDebugLines: 1
+  _showDebugOutput: 1
   _debugTextView: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
