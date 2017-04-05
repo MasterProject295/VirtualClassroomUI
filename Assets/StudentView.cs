@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Student : NetworkBehaviour {
+public class StudentView : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {	
