@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetScript : MonoBehaviour {
+public class CupResetScript : MonoBehaviour {
 
 	private Vector3 originalPosition;
 	private Quaternion originalRotation;

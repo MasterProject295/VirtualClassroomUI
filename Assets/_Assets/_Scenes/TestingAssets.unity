@@ -1953,6 +1953,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _manager: {fileID: 1713363860}
   _material: {fileID: 11400000, guid: 2b36778cd97232c459902ea9b77fd3ec, type: 2}
+--- !u!114 &1277104375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277104372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f222664360916a459015960aaee6964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1282137424
 GameObject:
   m_ObjectHideFlags: 0
