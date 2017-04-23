@@ -69,7 +69,7 @@ public class GvrViewer : MonoBehaviour {
   public static StereoController Controller {
     get {
 #if !UNITY_HAS_GOOGLEVR || UNITY_EDITOR
-      Camera camera = Camera.main;
+		Camera camera = Camera.main; //GameObject.Find("Capsule").GetComponent<Camera>();
       // Cache for performance, if possible.
       if (camera != currentMainCamera || currentController == null) {
         currentMainCamera = camera;
