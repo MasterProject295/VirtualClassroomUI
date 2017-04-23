@@ -295,13 +295,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 134031121}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.6, y: -11.38, z: 37.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.9989627, z: -0, w: -0.04553722}
+  m_LocalPosition: {x: -2.37, y: -10.16, z: 24.84}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 688178240}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 185.22, z: 0}
 --- !u!114 &134031123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,7 +1748,7 @@ GameObject:
   m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &853937656
 Transform:
   m_ObjectHideFlags: 0
@@ -2111,7 +2111,7 @@ GameObject:
   m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1159999710
 Transform:
   m_ObjectHideFlags: 0
@@ -2507,8 +2507,8 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.04761905
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -5275,7 +5275,17 @@ Prefab:
       propertyPath: _manager
       value: 
       objectReference: {fileID: 1713363860}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 54340163794298688, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54302069811733830, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54454226399600328, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54925060842832134, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54513604305360376, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54130888484244130, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54590359868524646, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54089542061968816, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54339578742695358, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
+    - {fileID: 54714468826438400, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1407295523
@@ -5635,8 +5645,8 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.04761905
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -6075,8 +6085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
-  m_ServerBindToIP: 0
-  m_ServerBindAddress: 10.250.157.54
+  m_ServerBindToIP: 1
+  m_ServerBindAddress: 169.254.35.39
   m_NetworkAddress: localhost
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
@@ -6307,7 +6317,7 @@ GameObject:
   m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1847014926
 Transform:
   m_ObjectHideFlags: 0
