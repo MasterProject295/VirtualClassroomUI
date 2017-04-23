@@ -2392,7 +2392,7 @@ Prefab:
     - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
       propertyPath: m_Mass
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
@@ -2448,7 +2448,7 @@ Prefab:
     - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
       propertyPath: m_Drag
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54534091056799198, guid: abd1280d95c2a224795e8c90a16e3c4d,
         type: 2}
