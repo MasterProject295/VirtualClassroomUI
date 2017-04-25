@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366824, g: 0.484276, b: 0.5645247, a: 1}
+  m_IndirectSpecularColor: {r: 0.43668178, g: 0.48427534, b: 0.5645237, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -650,7 +650,6 @@ GameObject:
   - component: {fileID: 291229484}
   - component: {fileID: 291229483}
   - component: {fileID: 291229489}
-  - component: {fileID: 291229488}
   m_Layer: 0
   m_Name: InstructorCam
   m_TagString: MainCamera
@@ -731,17 +730,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 29.862001, y: 177.255, z: 0}
---- !u!114 &291229488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 291229482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9adfa55ccee2a45b4281c51fd43bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &291229489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,7 +1501,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114185342685739304, guid: 66933004080c5f14eba2c40d1e7e57e7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 66933004080c5f14eba2c40d1e7e57e7, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &767309381 stripped
