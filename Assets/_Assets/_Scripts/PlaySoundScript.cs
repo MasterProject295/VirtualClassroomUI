@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayFireSound : NetworkBehaviour {
+public class PlaySoundScript : NetworkBehaviour {
 
 	GvrAudioSource gvrAudio;
 
 	// Use this for initialization
 	void Start () {
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -18,7 +18,7 @@ public class PlayFireSound : NetworkBehaviour {
 
 	[ClientRpc]
 	void RpcPlaySound()	{
-		Debug.Log ("Executing Rpc Play Sound");
+		Debug.Log ("Inside Rpc Play Sound");
 		gvrAudio = GetComponent<GvrAudioSource>();
 		if (!gvrAudio.isPlaying)
 		{

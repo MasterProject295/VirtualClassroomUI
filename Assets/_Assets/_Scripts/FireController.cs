@@ -49,7 +49,7 @@ public class FireController : NetworkBehaviour {
 		if (fireplay) {
 			fire = Instantiate (fire);
 			NetworkServer.Spawn (fire);
-			fire.GetComponent<PlayFireSound> ().PlaySound ();
+			fire.GetComponent<PlaySoundScript> ().PlaySound ();
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Play ();
 		
