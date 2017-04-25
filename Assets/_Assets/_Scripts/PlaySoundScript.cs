@@ -19,9 +19,10 @@ public class PlaySoundScript : NetworkBehaviour {
 	[ClientRpc]
 	void RpcPlaySound()	{
 		Debug.Log ("Inside Rpc Play Sound");
-		gvrAudio = GetComponent<GvrAudioSource>();
+		gvrAudio = gameObject.GetComponent<GvrAudioSource>();
 		if (!gvrAudio.isPlaying)
 		{
+			Debug.Log ("Playing the sound");
 			gvrAudio.Play();
 		}
 	}

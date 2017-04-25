@@ -28,10 +28,15 @@ public class FireController : NetworkBehaviour {
 		
 
 		Debug.Log ("Mouse Clicked");
-
+		fireplay = !fireplay;
+		if (fireplay) {
+			StartFire();
+		} else {
+			StopFire ();
+		}
         
 
-		StartFire();
+
 	}
 
 	public void CmdStartFire()	{
@@ -43,36 +48,40 @@ public class FireController : NetworkBehaviour {
 		StartCoroutine(smokegenerator ());
 	}
 
+	public void StopFire(){
+		NetworkServer.Destroy (fire);
+
+		if(isServer){
+		if (gvrAudio.isPlaying){
+			gvrAudio.Stop();
+		}
+			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
+				fire.GetComponent<ParticleSystem> ().Stop ();
+
+			}
+			Destroy (fire);
+
+		}
+	}
+
 	public void StartFire()	{
-			
-		fireplay = !fireplay;
-		if (fireplay) {
+		
 			fire = Instantiate (fire);
 			NetworkServer.Spawn (fire);
+		if (isServer) {
+
+			gvrAudio = fire.GetComponent<GvrAudioSource>();
+			if (!gvrAudio.isPlaying)
+			{
+				Debug.Log ("Playing the sound");
+				gvrAudio.Play();
+			}
+		}
 			fire.GetComponent<PlaySoundScript> ().PlaySound ();
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Play ();
 		
-			}				
-		} else {
-			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
-				fire.GetComponent<ParticleSystem> ().Stop ();
-			}
-			if (gvrAudio.isPlaying){
-				gvrAudio.Stop();
-			}
-			//Destroy (fire);
-
-			/*if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
-				smoke.GetComponent<ParticleSystem> ().Stop ();
-				//Destroy (smoke);
-			}
-			/*if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
-			powderAnimation.GetComponent<ParticleSystem> ().Stop ();
-			Destroy (powderAnimation);
-		}*/
-
-		}
+			}	
 	}
 
 	IEnumerator smokegenerator(){
