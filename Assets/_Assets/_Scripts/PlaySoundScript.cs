@@ -27,11 +27,66 @@ public class PlaySoundScript : NetworkBehaviour {
 		}
 	}
 
+	[ClientRpc]
+	void RpcStopSound()	{
+		Debug.Log ("Inside Rpc Stop Sound");
+		gvrAudio = gameObject.GetComponent<GvrAudioSource>();
+		if (gvrAudio.isPlaying)
+		{
+			Debug.Log ("Stopping sound");
+			gvrAudio.Stop();
+		}
+	}
+
 	public void PlaySound()	{
 		if (!isServer)
 			return;
 
-		Debug.Log ("Playing Sound");
+		Debug.Log ("Rpc Playing Sound");
 		RpcPlaySound ();
 	}
+
+	public void StopSound()	{
+		if (!isServer)
+			return;
+
+		Debug.Log ("Rpc Stopping Sound");
+		RpcStopSound ();
+	}
+
+
+	[ClientRpc]
+	void RpcStartFire()	{
+		Debug.Log ("Rpc Starting Sound");
+
+		if (!gameObject.GetComponent<ParticleSystem> ().isPlaying) {
+			gameObject.GetComponent<ParticleSystem> ().Play ();
+		}
+	}
+
+	[ClientRpc]
+	void RpcStopFire()	{
+		Debug.Log ("Rpc Stopping Sound");
+
+		if (gameObject.GetComponent<ParticleSystem> ().isPlaying) {
+			gameObject.GetComponent<ParticleSystem> ().Stop ();
+		}
+	}
+
+	public void StartFire()	{
+		if (!isServer)
+			return;
+
+		Debug.Log ("Starting Fire");
+		RpcStartFire ();
+	}
+
+	public void StopFire()	{
+		if (!isServer)
+			return;
+
+		Debug.Log ("Stopping Fire");
+		RpcStopFire ();
+	}
+		
 }

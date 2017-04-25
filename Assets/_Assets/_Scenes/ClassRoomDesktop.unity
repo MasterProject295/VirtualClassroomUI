@@ -2082,6 +2082,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1405780918}
   m_Script: {fileID: 11500000, guid: 025cc0fa7b46aa541aba29d28d35ac09, type: 3}
+--- !u!1001 &1205937600
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -7.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323557417790812, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3cfa05b19ddec9f43b95068cb34b7e07, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1219494449 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f42838308461a634682be0b1eb1a5a4c, type: 3}
