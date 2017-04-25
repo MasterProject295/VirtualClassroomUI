@@ -51,7 +51,7 @@ public class FireController : NetworkBehaviour {
 			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Stop ();
 			}
-			Destroy (fire);
+			//Destroy (fire);
             
 
 			/*if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
