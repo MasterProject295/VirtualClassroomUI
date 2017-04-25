@@ -12,11 +12,11 @@ public class FireController : NetworkBehaviour {
 	public GameObject powderAnimation;
 	public GameObject mgo;
 	public GameObject cup;
-
+    private GvrAudioSource gvrAudio;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        gvrAudio = GetComponent<GvrAudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,9 +29,17 @@ public class FireController : NetworkBehaviour {
 
 		Debug.Log ("Mouse Clicked");
 
+        if (gvrAudio.isPlaying)
+        {
+            gvrAudio.Stop();
+        }
+        else {
+            gvrAudio.Play();
+        }
 		fireplay = !fireplay;
 		if (fireplay) {
 
+           
 			fire = Instantiate (fire);
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Stop ();
@@ -44,6 +52,7 @@ public class FireController : NetworkBehaviour {
 				fire.GetComponent<ParticleSystem> ().Stop ();
 			}
 			Destroy (fire);
+            
 
 			/*if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
 				smoke.GetComponent<ParticleSystem> ().Stop ();
