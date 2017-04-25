@@ -45,7 +45,7 @@ public class FireController : NetworkBehaviour {
 				fire.GetComponent<ParticleSystem> ().Stop ();
 			}
 				
-			StartCoroutine(smokegenerator ());
+			//StartCoroutine(smokegenerator ());
 
 		} else {
 			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
@@ -69,13 +69,17 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator smokegenerator(){
 
-		yield return new WaitForSeconds (3);
-		smoke = Instantiate (smoke);
-		if (!smoke.GetComponent<ParticleSystem> ().isPlaying) {
-			smoke.GetComponent<ParticleSystem> ().Play ();
-		}
+		if (fire.GetComponent<ParticleSystem> ().isPlaying) {
 
-		StartCoroutine(metalburning ());
+			yield return new WaitForSeconds (3);
+			Quaternion rotation = Quaternion.Euler (-90, 0, 0);
+			smoke = Instantiate (smoke, metal.transform.position, rotation);
+			if (!smoke.GetComponent<ParticleSystem> ().isPlaying) {
+				smoke.GetComponent<ParticleSystem> ().Play ();
+			}
+
+			StartCoroutine (metalburning ());
+		}
 
 	}
 
