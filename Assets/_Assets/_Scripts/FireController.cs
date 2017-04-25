@@ -48,13 +48,8 @@ public class FireController : NetworkBehaviour {
 		fireplay = !fireplay;
 		if (fireplay) {
 			fire = Instantiate (fire);
-			gvrAudio = fire.GetComponent<GvrAudioSource> ();
-			if (!gvrAudio.isPlaying)
-			{
-				gvrAudio.Play();
-			}
-
 			NetworkServer.Spawn (fire);
+			fire.GetComponent<PlayFireSound> ().PlaySound ();
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Play ();
 		
