@@ -18,11 +18,13 @@ public class DisableComponentsCube : NetworkBehaviour {
             rb = GetComponent<Rigidbody>();
             rb.detectCollisions = false;
             rb.useGravity = false;
-            Destroy(rb);
             boxCollider = GetComponent<BoxCollider>();
-            boxCollider.enabled = false;
+			boxCollider.enabled = false;
+			Destroy (boxCollider);
             ib = GetComponent<InteractionBehaviour>();
             ib.enabled = false;
+			Destroy (ib);
+			Destroy(rb);
         }
         
 	}
