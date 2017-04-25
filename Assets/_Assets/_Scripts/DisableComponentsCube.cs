@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using Leap.Unity.Interaction;
-
+/*
+Created By: Akshay Mathur
+Purpose: Disable and Remove Cube Components
+Reason: GROOV-46
+*/
 public class DisableComponentsCube : NetworkBehaviour {
 
     private Rigidbody rb;
@@ -14,15 +18,20 @@ public class DisableComponentsCube : NetworkBehaviour {
 
         if (isClient)
         {
+			//Get References to Rigid Body, Interaction behaviour, Box Collider
             Debug.Log("Disabling Components: Cube");
             rb = GetComponent<Rigidbody>();
+			//remove collision detection and gravity
             rb.detectCollisions = false;
             rb.useGravity = false;
             boxCollider = GetComponent<BoxCollider>();
+			//disable boxcollider
 			boxCollider.enabled = false;
-			Destroy (boxCollider);
             ib = GetComponent<InteractionBehaviour>();
+			//disable Interaction behaviour
             ib.enabled = false;
+			//Remove the components
+			Destroy (boxCollider);
 			Destroy (ib);
 			Destroy(rb);
         }
