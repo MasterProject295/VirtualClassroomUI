@@ -16,6 +16,12 @@ public class FireController : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
         gvrAudio = GetComponent<GvrAudioSource>();
+		fire = Instantiate (fire);
+		NetworkServer.Spawn (fire);
+		if (fire.GetComponent<ParticleSystem> ().isPlaying) {
+			fire.GetComponent<ParticleSystem> ().Stop ();
+
+		}
     }
 	
 	// Update is called once per frame
@@ -49,25 +55,24 @@ public class FireController : NetworkBehaviour {
 	}
 
 	public void StopFire(){
-		NetworkServer.Destroy (fire);
+		//NetworkServer.Destroy (fire);
 
 		if(isServer){
-		if (gvrAudio.isPlaying){
-			gvrAudio.Stop();
-		}
+			if (gvrAudio.isPlaying) {
+				gvrAudio.Stop ();
+			}
+
 			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Stop ();
 
 			}
-			Destroy (fire);
-
 		}
 	}
 
 	public void StartFire()	{
 		
-			fire = Instantiate (fire);
-			NetworkServer.Spawn (fire);
+			
+
 		if (isServer) {
 
 			gvrAudio = fire.GetComponent<GvrAudioSource>();
