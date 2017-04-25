@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Capsule
+  - Fire
+  - metal
+  - cup
   layers:
   - Default
   - TransparentFX

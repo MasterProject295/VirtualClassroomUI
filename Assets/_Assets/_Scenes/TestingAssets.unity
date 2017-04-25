@@ -1637,6 +1637,106 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &828115660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 828115664}
+  - component: {fileID: 828115663}
+  - component: {fileID: 828115662}
+  - component: {fileID: 828115661}
+  - component: {fileID: 828115665}
+  m_Layer: 0
+  m_Name: BurnerTouchPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &828115661
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828115660}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &828115662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828115660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &828115663
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828115660}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &828115664
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828115660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 235.625, y: 1.107, z: 152.677}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &828115665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828115660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88c2b340ab49f342bb981f930579a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 1586750598033140, guid: 08f507527b42d184b9a9550bce4afd25, type: 2}
+  smoke: {fileID: 1130923273262554, guid: e8a98ee4f73e3d542ab38b34d608dd94, type: 2}
+  metal: {fileID: 1514115381}
+  powderAnimation: {fileID: 1471029755596614, guid: 906f4ae3d251aba4995fd0482da2cb1d,
+    type: 2}
+  mgo: {fileID: 1681597073386520, guid: 116c4ff781294ac4e98577ca97654123, type: 2}
+  cup: {fileID: 1907708351814744, guid: abd1280d95c2a224795e8c90a16e3c4d, type: 2}
 --- !u!1 &935190001 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100026, guid: 575a9f5d3bb64d64ab391580205dfc95, type: 3}
@@ -1731,6 +1831,10 @@ Prefab:
     - target: {fileID: 2300000, guid: c019c75576ea70b4bb42b3b939ede17f, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c019c75576ea70b4bb42b3b939ede17f, type: 3}
+      propertyPath: m_TagString
+      value: metal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c019c75576ea70b4bb42b3b939ede17f, type: 3}
@@ -1912,6 +2016,10 @@ Prefab:
         type: 2}
       propertyPath: m_Center.z
       value: -0.00085644174
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907708351814744, guid: abd1280d95c2a224795e8c90a16e3c4d, type: 2}
+      propertyPath: m_TagString
+      value: cup
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64994114196353694, guid: abd1280d95c2a224795e8c90a16e3c4d, type: 2}
