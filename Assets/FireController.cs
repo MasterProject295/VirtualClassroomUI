@@ -13,15 +13,14 @@ public class FireController : NetworkBehaviour {
 	public GameObject mgo;
 	public GameObject cup;
 
-
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		metal = GameObject.FindGameObjectWithTag ("metal");
+		metal = GameObject.FindGameObjectWithTag ("metal");	
 		cup = GameObject.FindGameObjectWithTag ("cup");
 	}
 
@@ -46,14 +45,14 @@ public class FireController : NetworkBehaviour {
 			}
 			Destroy (fire);
 
-			if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
+			/*if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
 				smoke.GetComponent<ParticleSystem> ().Stop ();
 				Destroy (smoke);
-			}
-			if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
+			}*/
+			/*if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
 				powderAnimation.GetComponent<ParticleSystem> ().Stop ();
 				Destroy (powderAnimation);
-			}
+			}*/
 		
 		}
 
@@ -87,19 +86,28 @@ public class FireController : NetworkBehaviour {
 	IEnumerator metaldisappearing(){
 
 		yield return new WaitForSeconds (5);
+	
+		mgo = Instantiate (mgo, metal.transform.position, Quaternion.identity);
+		Destroy (metal);
+
+		StartCoroutine(particleresidueeffect ());
+
+	}
+
+	IEnumerator particleresidueeffect(){
+
+		yield return new WaitForSeconds (3);
 
 		if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
 			powderAnimation.GetComponent<ParticleSystem> ().Stop ();
 			Destroy (powderAnimation);
 		}
-			
-		mgo = Instantiate (mgo, metal.transform.position, Quaternion.identity);
-		Destroy (metal);
-	
+
 		if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
 			smoke.GetComponent<ParticleSystem> ().Stop ();
 			Destroy (smoke);
 		}
-
 	}
+
+
 }
