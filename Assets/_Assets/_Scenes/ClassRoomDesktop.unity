@@ -6651,7 +6651,7 @@ MonoBehaviour:
   listenerDirectivitySharpness: 1
   gainDb: 0
   occlusionEnabled: 0
-  playOnAwake: 1
+  playOnAwake: 0
   sourceClip: {fileID: 8300000, guid: 43ccd86a169109f479b4be893b682644, type: 3}
   sourceLoop: 0
   sourceMute: 0

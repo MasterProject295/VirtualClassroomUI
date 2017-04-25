@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4323557417790812}
   - component: {fileID: 198844606132379002}
   - component: {fileID: 199941253270323394}
+  - component: {fileID: 114968565145850306}
   m_Layer: 0
   m_Name: FireFlames
   m_TagString: Untagged
@@ -41,6 +42,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114968565145850306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586750598033140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 60
+    i1: 250
+    i2: 5
+    i3: 177
+    i4: 157
+    i5: 222
+    i6: 201
+    i7: 244
+    i8: 59
+    i9: 149
+    i10: 6
+    i11: 140
+    i12: 179
+    i13: 75
+    i14: 126
+    i15: 7
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!198 &198844606132379002
 ParticleSystem:
   m_ObjectHideFlags: 1

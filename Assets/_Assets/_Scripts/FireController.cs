@@ -35,36 +35,45 @@ public class FireController : NetworkBehaviour {
         }
         else {
             gvrAudio.Play();
-        }
+        }	
+
+		CmdStartFire ();
+	}
+
+	[Command]
+	public void CmdStartFire()	{
+		StartFire ();
+	}
+
+	[Command]
+	public void CmdStartSmoke()	{
+		StartCoroutine(smokegenerator ());
+	}
+
+	public void StartFire()	{
 		fireplay = !fireplay;
 		if (fireplay) {
-
-           
 			fire = Instantiate (fire);
+			NetworkServer.Spawn (fire);
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Stop ();
-			}
-				
-			//StartCoroutine(smokegenerator ());
-
+			}				
 		} else {
 			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Stop ();
 			}
 			Destroy (fire);
-            
 
 			/*if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
 				smoke.GetComponent<ParticleSystem> ().Stop ();
 				Destroy (smoke);
 			}*/
 			/*if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
-				powderAnimation.GetComponent<ParticleSystem> ().Stop ();
-				Destroy (powderAnimation);
-			}*/
-		
-		}
+			powderAnimation.GetComponent<ParticleSystem> ().Stop ();
+			Destroy (powderAnimation);
+		}*/
 
+		}
 	}
 
 	IEnumerator smokegenerator(){
