@@ -49,9 +49,12 @@ public class FireController : NetworkBehaviour {
 
 	public void StopFire(){
 		if(isServer){
+
 			if (gvrAudio.isPlaying) {
 				gvrAudio.Stop ();
 			}
+
+			fire.GetComponent<FireFlamesScript> ().StopSound ();
 
 			NetworkServer.Destroy (fire);
 			Destroy (fire);
@@ -74,6 +77,7 @@ public class FireController : NetworkBehaviour {
 				gvrAudio.Play();
 			}
 
+			fire.GetComponent<FireFlamesScript> ().PlaySound ();
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Play ();
 			}
