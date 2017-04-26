@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlaySoundScript : NetworkBehaviour {
+public class FireFlamesScript : NetworkBehaviour {
 
 	GvrAudioSource gvrAudio;
+	bool metalDetected = false;
 
 	// Use this for initialization
 	void Start () {
@@ -53,40 +54,13 @@ public class PlaySoundScript : NetworkBehaviour {
 		Debug.Log ("Rpc Stopping Sound");
 		RpcStopSound ();
 	}
-
-
-	[ClientRpc]
-	void RpcStartFire()	{
-		Debug.Log ("Rpc Starting Sound");
-
-		if (!gameObject.GetComponent<ParticleSystem> ().isPlaying) {
-			gameObject.GetComponent<ParticleSystem> ().Play ();
-		}
-	}
-
-	[ClientRpc]
-	void RpcStopFire()	{
-		Debug.Log ("Rpc Stopping Sound");
-
-		if (gameObject.GetComponent<ParticleSystem> ().isPlaying) {
-			gameObject.GetComponent<ParticleSystem> ().Stop ();
-		}
-	}
-
-	public void StartFire()	{
-		if (!isServer)
-			return;
-
-		Debug.Log ("Starting Fire");
-		RpcStartFire ();
-	}
-
-	public void StopFire()	{
-		if (!isServer)
-			return;
-
-		Debug.Log ("Stopping Fire");
-		RpcStopFire ();
-	}
 		
+	public void OnTriggerEnter(Collider other)	{
+		Debug.Log ("Fire Collision detected");
+		if (other.CompareTag ("metal")) {
+			Debug.Log ("Fire Collided with metal");
+			GameObject burnerTouchPoint = GameObject.FindGameObjectWithTag ("touchpoint");
+			burnerTouchPoint.GetComponent<FireController> ().StartSmoke ();;
+		}
+	}
 }

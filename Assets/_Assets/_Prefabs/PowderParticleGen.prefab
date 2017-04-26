@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4332932914598636}
   - component: {fileID: 198673646348571346}
   - component: {fileID: 199897951378586422}
+  - component: {fileID: 114902241111320110}
+  - component: {fileID: 114154801870180262}
   m_Layer: 0
   m_Name: PowderParticleGen
   m_TagString: Untagged
@@ -36,11 +38,63 @@ Transform:
   m_GameObject: {fileID: 1471029755596614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 235.629, y: 1.366, z: 152.763}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114154801870180262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471029755596614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114902241111320110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471029755596614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 109
+    i1: 68
+    i2: 27
+    i3: 136
+    i4: 229
+    i5: 56
+    i6: 219
+    i7: 148
+    i8: 155
+    i9: 48
+    i10: 108
+    i11: 110
+    i12: 8
+    i13: 155
+    i14: 172
+    i15: 69
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!198 &198673646348571346
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -96,7 +150,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1883597352
+  randomSeed: 1860233665
   InitialModule:
     serializedVersion: 3
     enabled: 1

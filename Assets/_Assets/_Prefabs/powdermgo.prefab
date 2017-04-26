@@ -52,6 +52,8 @@ GameObject:
   - component: {fileID: 54214154306079528}
   - component: {fileID: 23674545195497476}
   - component: {fileID: 65532266319549648}
+  - component: {fileID: 114150615789528844}
+  - component: {fileID: 114202740848798696}
   m_Layer: 0
   m_Name: powdermgo
   m_TagString: Untagged
@@ -175,7 +177,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 71e6e104099a7ea42878fb19fe2d4558, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -227,3 +229,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 0.9}
   m_Center: {x: -0.25, y: 0.4, z: -0.1}
+--- !u!114 &114150615789528844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720712339277466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 190
+    i1: 245
+    i2: 229
+    i3: 40
+    i4: 126
+    i5: 203
+    i6: 159
+    i7: 132
+    i8: 152
+    i9: 120
+    i10: 140
+    i11: 179
+    i12: 154
+    i13: 135
+    i14: 207
+    i15: 31
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114202740848798696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720712339277466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

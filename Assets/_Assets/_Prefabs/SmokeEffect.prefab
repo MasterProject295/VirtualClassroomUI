@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4818274033899358}
   - component: {fileID: 198321519261642550}
   - component: {fileID: 199630957718293068}
+  - component: {fileID: 114618100773703386}
+  - component: {fileID: 114681984429253876}
   m_Layer: 0
   m_Name: SmokeEffect
   m_TagString: Untagged
@@ -41,6 +43,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114618100773703386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130923273262554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 89
+    i1: 59
+    i2: 56
+    i3: 107
+    i4: 10
+    i5: 212
+    i6: 198
+    i7: 196
+    i8: 218
+    i9: 232
+    i10: 128
+    i11: 27
+    i12: 12
+    i13: 114
+    i14: 134
+    i15: 7
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114681984429253876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130923273262554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!198 &198321519261642550
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -96,7 +150,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 751563077
+  randomSeed: 1570678336
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -6,22 +6,21 @@ using UnityEngine.Networking;
 public class FireController : NetworkBehaviour {
 
 	protected bool fireplay = false;
-	public GameObject fire;
-	public GameObject smoke;
+	public GameObject fireprefab;
+	public GameObject smokeprefab;
 	public GameObject metal;
-	public GameObject powderAnimation;
-	public GameObject mgo;
+	public GameObject powderAnimationprefab;
+	public GameObject mgoprefab;
 	public GameObject cup;
     private GvrAudioSource gvrAudio;
-
+	GameObject fire;
+	GameObject smoke;
+	GameObject powderAnimation;
+	GameObject mgo;
 	// Use this for initialization
 	void Start () {
         gvrAudio = GetComponent<GvrAudioSource>();
-		fire = Instantiate (fire);
-		if (fire.GetComponent<ParticleSystem> ().isPlaying) {
-			fire.GetComponent<ParticleSystem> ().Stop ();
 		}
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,14 +38,14 @@ public class FireController : NetworkBehaviour {
 		}       
 	}
 
-	public void CmdStartFire()	{
+	/*public void CmdStartFire()	{
 		StartFire ();
 	}
 
 	[Command]
 	public void CmdStartSmoke()	{
 		StartCoroutine(smokegenerator ());
-	}
+	}*/
 
 	public void StopFire(){
 		if(isServer){
@@ -54,17 +53,19 @@ public class FireController : NetworkBehaviour {
 				gvrAudio.Stop ();
 			}
 
-			fire.GetComponent<PlaySoundScript> ().StopSound ();
-			fire.GetComponent<PlaySoundScript> ().StopFire ();
-
-			if (fire.GetComponent<ParticleSystem> ().isPlaying) {
-				fire.GetComponent<ParticleSystem> ().Stop ();
-			}
+			NetworkServer.Destroy (fire);
+			Destroy (fire);
 		}
 	}
 
 	public void StartFire()	{
+		
+
 		if (isServer) {
+
+			fire = Instantiate (fireprefab);
+			NetworkServer.Spawn (fire);
+
 			gvrAudio = fire.GetComponent<GvrAudioSource>();
 
 			if (!gvrAudio.isPlaying)
@@ -73,22 +74,28 @@ public class FireController : NetworkBehaviour {
 				gvrAudio.Play();
 			}
 
-			fire.GetComponent<PlaySoundScript> ().PlaySound ();
-			fire.GetComponent<PlaySoundScript> ().StartFire ();
-
 			if (!fire.GetComponent<ParticleSystem> ().isPlaying) {
 				fire.GetComponent<ParticleSystem> ().Play ();
 			}
 		}	
 	}
+		
+	public void StartSmoke()	{
+		StartCoroutine (smokegenerator());
+	}
+
 
 	IEnumerator smokegenerator(){
 
-		if (fire.GetComponent<ParticleSystem> ().isPlaying) {
+		if (fire != null && fire.GetComponent<ParticleSystem> ().isPlaying) {
 
-			yield return new WaitForSeconds (3);
+			yield return new WaitForSeconds (1);
 			Quaternion rotation = Quaternion.Euler (-90, 0, 0);
-			smoke = Instantiate (smoke, metal.transform.position, rotation);
+			if (smoke == null) {
+				smoke = Instantiate (smokeprefab, metal.transform.position, rotation);
+				NetworkServer.Spawn (smoke);
+			}
+
 			if (!smoke.GetComponent<ParticleSystem> ().isPlaying) {
 				smoke.GetComponent<ParticleSystem> ().Play ();
 			}
@@ -100,10 +107,14 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator metalburning(){
 
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (2);
 
 		//Quaternion rotation = Quaternion.Euler (-90, 0, 0);
-		powderAnimation = Instantiate (powderAnimation, metal.transform.position,  Quaternion.identity);
+		if (powderAnimation == null) {
+			powderAnimation = Instantiate (powderAnimationprefab, metal.transform.position, Quaternion.identity);
+			NetworkServer.Spawn (powderAnimation);
+		}
+
 		if (!powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
 			powderAnimation.GetComponent<ParticleSystem> ().Play ();
 		}
@@ -113,9 +124,13 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator metaldisappearing(){
 
-		yield return new WaitForSeconds (5);
-	
-		mgo = Instantiate (mgo, metal.transform.position, Quaternion.identity);
+		yield return new WaitForSeconds (2);
+
+		if (mgo == null) {
+			mgo = Instantiate (mgoprefab, metal.transform.position, Quaternion.identity);
+			NetworkServer.Spawn (mgo);
+		}
+		NetworkServer.Destroy (metal);
 		Destroy (metal);
 
 		StartCoroutine(particleresidueeffect ());
@@ -124,15 +139,19 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator particleresidueeffect(){
 
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (1);
 
 		if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
 			powderAnimation.GetComponent<ParticleSystem> ().Stop ();
+
+			NetworkServer.Destroy (powderAnimation);
 			Destroy (powderAnimation);
 		}
 
 		if (smoke.GetComponent<ParticleSystem> ().isPlaying) {
 			smoke.GetComponent<ParticleSystem> ().Stop ();
+
+			NetworkServer.Destroy (smoke);
 			Destroy (smoke);
 		}
 	}

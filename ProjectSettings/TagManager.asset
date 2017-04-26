@@ -8,6 +8,8 @@ TagManager:
   - cup
   - Fire
   - metal
+  - fireflame
+  - touchpoint
   layers:
   - Default
   - TransparentFX
