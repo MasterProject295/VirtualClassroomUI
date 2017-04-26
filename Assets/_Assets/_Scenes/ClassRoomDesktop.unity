@@ -2207,7 +2207,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c019c75576ea70b4bb42b3b939ede17f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 37.73478
+      value: 37.7347
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c019c75576ea70b4bb42b3b939ede17f, type: 3}
       propertyPath: m_LocalScale.y
@@ -2287,6 +2287,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abd1280d95c2a224795e8c90a16e3c4d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1277104372 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907708351814744, guid: abd1280d95c2a224795e8c90a16e3c4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1277104371}
 --- !u!1001 &1279832593
 Prefab:
   m_ObjectHideFlags: 0
@@ -6271,7 +6276,7 @@ MonoBehaviour:
   powderAnimationprefab: {fileID: 1471029755596614, guid: 6d441b88e538db949b306c6e089bac45,
     type: 2}
   mgoprefab: {fileID: 1681597073386520, guid: 188918664a26a4043b3c15018423d02c, type: 2}
-  cup: {fileID: 100008, guid: dc6e26f17dfa5da4f86cfa2a20abf532, type: 3}
+  cup: {fileID: 1277104372}
 --- !u!114 &1943818569
 MonoBehaviour:
   m_ObjectHideFlags: 0
