@@ -170,7 +170,7 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator explosionbegins(){
 
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (10);
 		if (fire != null && fire.GetComponent<ParticleSystem> ().isPlaying) {
 
 			Quaternion rotation = Quaternion.Euler (-90, 0, 0);

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43668196, g: 0.48427576, b: 0.56452405, a: 1}
+  m_IndirectSpecularColor: {r: 0.43668178, g: 0.48427534, b: 0.5645237, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -553,6 +553,8 @@ GameObject:
   - component: {fileID: 264681501}
   - component: {fileID: 264681500}
   - component: {fileID: 264681499}
+  - component: {fileID: 264681507}
+  - component: {fileID: 264681508}
   m_Layer: 0
   m_Name: ChemicalTube
   m_TagString: tube
@@ -698,11 +700,33 @@ Transform:
   m_GameObject: {fileID: 264681498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.92, y: -3.671, z: -7.969}
-  m_LocalScale: {x: 0.0720128, y: 0.12165373, z: 0.10539377}
+  m_LocalScale: {x: 0.072, y: 0.1216, z: 0.1053}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264681507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264681498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0ff348fbee9ba409bad59e2a6e5b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &264681508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264681498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f7e976d741df84aaf7fdff8b3d9b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &268942835
 GameObject:
   m_ObjectHideFlags: 0
@@ -6663,8 +6687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
-  m_ServerBindToIP: 0
-  m_ServerBindAddress: 169.254.35.39
+  m_ServerBindToIP: 1
+  m_ServerBindAddress: 10.250.29.59
   m_NetworkAddress: localhost
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
