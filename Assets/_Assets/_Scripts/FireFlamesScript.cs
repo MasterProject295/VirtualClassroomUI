@@ -60,7 +60,12 @@ public class FireFlamesScript : NetworkBehaviour {
 		if (other.CompareTag ("metal")) {
 			Debug.Log ("Fire Collided with metal");
 			GameObject burnerTouchPoint = GameObject.FindGameObjectWithTag ("touchpoint");
-			burnerTouchPoint.GetComponent<FireController> ().StartSmoke ();;
+			burnerTouchPoint.GetComponent<FireController> ().StartSmoke ();
+		} else if(other.CompareTag ("tube")){
+			Debug.Log ("Fire Collided with tube");
+			GameObject burnerTouchPoint = GameObject.FindGameObjectWithTag ("touchpoint");
+			burnerTouchPoint.GetComponent<FireController> ().StartExplosion ();
 		}
 	}
+		
 }

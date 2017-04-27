@@ -12,11 +12,14 @@ public class FireController : NetworkBehaviour {
 	public GameObject powderAnimationprefab;
 	public GameObject mgoprefab;
 	public GameObject cup;
+	public GameObject explosionprefab;
+	public GameObject tube;
     private GvrAudioSource gvrAudio;
 	GameObject fire;
 	GameObject smoke;
 	GameObject powderAnimation;
 	GameObject mgo;
+	GameObject explosion;
 	// Use this for initialization
 	void Start () {
         gvrAudio = GetComponent<GvrAudioSource>();
@@ -26,6 +29,7 @@ public class FireController : NetworkBehaviour {
 	void Update () {
 		metal = GameObject.FindGameObjectWithTag ("metal");	
 		cup = GameObject.FindGameObjectWithTag ("cup");
+		tube = GameObject.FindGameObjectWithTag ("tube");
 	}
 
 	void OnMouseDown(){
@@ -93,7 +97,7 @@ public class FireController : NetworkBehaviour {
 
 		if (fire != null && fire.GetComponent<ParticleSystem> ().isPlaying) {
 
-			yield return new WaitForSeconds (1);
+			yield return new WaitForSeconds (10);
 			Quaternion rotation = Quaternion.Euler (-90, 0, 0);
 			if (smoke == null) {
 				smoke = Instantiate (smokeprefab, metal.transform.position, rotation);
@@ -111,7 +115,7 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator metalburning(){
 
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (10);
 
 		//Quaternion rotation = Quaternion.Euler (-90, 0, 0);
 		if (powderAnimation == null) {
@@ -128,7 +132,7 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator metaldisappearing(){
 
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (5);
 
 		if (mgo == null) {
 			mgo = Instantiate (mgoprefab, metal.transform.position, Quaternion.identity);
@@ -143,7 +147,7 @@ public class FireController : NetworkBehaviour {
 
 	IEnumerator particleresidueeffect(){
 
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (10);
 
 		if (powderAnimation.GetComponent<ParticleSystem> ().isPlaying) {
 			powderAnimation.GetComponent<ParticleSystem> ().Stop ();
@@ -160,5 +164,44 @@ public class FireController : NetworkBehaviour {
 		}
 	}
 
+	public void StartExplosion(){
+		StartCoroutine (explosionbegins());
+	}
 
+	IEnumerator explosionbegins(){
+
+		yield return new WaitForSeconds (2);
+		if (fire != null && fire.GetComponent<ParticleSystem> ().isPlaying) {
+
+			Quaternion rotation = Quaternion.Euler (-90, 0, 0);
+			if (explosion == null) {
+				explosion = Instantiate (explosionprefab, tube.transform.position, rotation);
+				NetworkServer.Spawn (explosion);
+				PlayExplosionSound ();
+			}
+			NetworkServer.Destroy (tube);
+			Destroy (tube);
+
+			yield return new WaitForSeconds (2);
+
+			StopExplosionSound ();
+
+			if (explosion.GetComponent<ParticleSystem> ().isPlaying) {
+				explosion.GetComponent<ParticleSystem> ().Stop ();
+			}
+			NetworkServer.Destroy (explosion);
+			Destroy (explosion);
+
+		}
+
+	}
+
+	public void PlayExplosionSound(){
+		explosion.GetComponent<ExplosionScript> ().PlayExplosionSound ();
+	}
+
+	public void StopExplosionSound(){
+		explosion.GetComponent<ExplosionScript> ().StopExplosionSound ();
+	}
+		
 }

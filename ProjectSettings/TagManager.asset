@@ -10,6 +10,7 @@ TagManager:
   - metal
   - fireflame
   - touchpoint
+  - tube
   layers:
   - Default
   - TransparentFX
