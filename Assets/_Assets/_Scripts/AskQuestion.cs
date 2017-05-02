@@ -60,5 +60,4 @@ public class AskQuestion : NetworkBehaviour {
 			Debug.Log ("Current Value is--> " + current);
 		
 		}
-
 }

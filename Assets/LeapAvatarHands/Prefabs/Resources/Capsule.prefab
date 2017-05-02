@@ -1667,13 +1667,14 @@ GameObject:
   - component: {fileID: 23307605691216602}
   - component: {fileID: 114849380064337894}
   - component: {fileID: 114185342685739304}
+  - component: {fileID: 114266799806362752}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Capsule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1865156198068680
 GameObject:
   m_ObjectHideFlags: 1
@@ -3310,6 +3311,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114266799806362752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858509195509110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63fd40ca2c0c4641b3eb022afb7bb01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestion: 0
 --- !u!114 &114268342740288558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4485,9 +4498,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: getValues
-        m_Mode: 1
+      - m_Target: {fileID: 114266799806362752}
+        m_MethodName: CallCmdSendQuestion
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
