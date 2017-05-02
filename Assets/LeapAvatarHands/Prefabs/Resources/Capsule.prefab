@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 23307605691216602}
   - component: {fileID: 114849380064337894}
   - component: {fileID: 114185342685739304}
+  - component: {fileID: 114717943349681782}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Capsule
@@ -392,7 +393,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858509195509110}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ad53e6382252a94f887be04bcc3f15d, type: 3}
   m_Name: 
@@ -440,6 +441,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reticleSegments: 20
   reticleGrowthSpeed: 8
+--- !u!114 &114717943349681782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858509195509110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63fd40ca2c0c4641b3eb022afb7bb01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestion: 0
 --- !u!114 &114847496197260592
 MonoBehaviour:
   m_ObjectHideFlags: 1
