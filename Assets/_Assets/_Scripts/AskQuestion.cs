@@ -37,13 +37,16 @@ public class AskQuestion : NetworkBehaviour {
 		
 	}
 
-	public void getValues(){
-		Debug.Log (answerView.text);
-		Debug.Log (questionView.text);
-		Debug.Log (isLocalPlayer);
-		if (isLocalPlayer) {
-			Debug.Log ("calling command");
-			CmdSendQuestion (currentQuestion);
+	public void setValues(int current){
+		switch (current) {
+		case 1:
+			answerView.text = answers [0];
+			questionView.text = questions [0];
+			break;
+		}
+		Debug.Log ("Current Value is--> " + current);
+		if (isClient) {
+			CmdSendQuestion (current);
 		}
 	}
 
