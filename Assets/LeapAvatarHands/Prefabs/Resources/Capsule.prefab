@@ -5910,7 +5910,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114717943349681782}
-        m_MethodName: CallCmdSendQuestion
+        m_MethodName: setValues
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
