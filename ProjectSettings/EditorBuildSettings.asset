@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/_Assets/_Scenes/Menu.unity
   - enabled: 0
     path: Assets/_Assets/_Scenes/ClassRoomScene.unity
+  - enabled: 0
+    path: Assets/_Assets/_Scenes/ClassRoomDesktop.unity
