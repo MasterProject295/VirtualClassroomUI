@@ -12,10 +12,10 @@ public class StudentView : NetworkBehaviour {
 			gameObject.SetActive(false);
 		}
 
-	/*	if (isClient && !isLocalPlayer) {
+		if (isClient && !isLocalPlayer) {
 			Debug.Log ("Initializing Instructor View");	
 			gameObject.SetActive(false);
-		} */
+		} 
 	}
 	
 	// Update is called once per frame

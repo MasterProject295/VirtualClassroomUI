@@ -10,6 +10,16 @@ public class AskQuestion : NetworkBehaviour {
 	private GameObject whiteBoard;
 	private Text answerView;
 	private Text questionView;
+	private string[] questions = {  "Explain about combustion reaction?",
+									"Why is magnesium oxide hazardous?",
+									"What is the temperature at which glass melts?",
+									"What is Krakatao tube"};
+	
+	private string[] answers = { "Combustion or burning is a high-temperature exothermic redox chemical reaction between a fuel (the reductant) and an oxidant, usually atmospheric oxygen, that produces oxidized, often gaseous products, in a mixture termed as smoke.",
+		""
+	};
+	
+
 
 	// Use this for initialization
 	void Start () {
@@ -30,12 +40,25 @@ public class AskQuestion : NetworkBehaviour {
 	public void getValues(){
 		Debug.Log (answerView.text);
 		Debug.Log (questionView.text);
+		Debug.Log (isLocalPlayer);
+		if (isLocalPlayer) {
+			Debug.Log ("calling command");
+			CmdSendQuestion (currentQuestion);
+		}
 	}
 
 	[Command]
 	public void CmdSendQuestion(int current){
-
-		Debug.Log ("Current Value is--> " + current);
+		Debug.Log ("Called command");
+			switch (current) {
+			case 1:
+				answerView.text = answers [0];
+				questionView.text = questions [0];
+				getValues ();
+				break;
+			}
+			Debug.Log ("Current Value is--> " + current);
 		
-	}
+		}
+
 }
