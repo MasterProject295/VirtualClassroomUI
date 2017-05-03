@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -38,8 +39,17 @@ public class AskQuestion : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (isServer) {
+			Debug.Log ("I am server");
+			foreach (KeyCode kCode in Enum.GetValues(typeof(KeyCode))) {
+				if (Input.GetKeyDown (kCode)) {
+					Debug.Log (kCode);
+		//			RpcInstructorAnswer (kCode);
+				}
+			}
+		}			
 	}
+		
 
 	public void setValues(int current){
 		switch (current) {

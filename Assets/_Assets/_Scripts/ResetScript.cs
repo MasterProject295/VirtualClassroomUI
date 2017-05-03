@@ -23,8 +23,8 @@ public class ResetScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.R)) {
-			Debug.Log ("User pressed R");
+		if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey (KeyCode.R)) {
+			Debug.Log ("User pressed Cltr + R");
 			Reset ();
 		}
 	}
