@@ -54,13 +54,18 @@ public class FireFlamesScript : NetworkBehaviour {
 		Debug.Log ("Rpc Stopping Sound");
 		RpcStopSound ();
 	}
-		
+
 	public void OnTriggerEnter(Collider other)	{
 		Debug.Log ("Fire Collision detected");
 		if (other.CompareTag ("metal")) {
 			Debug.Log ("Fire Collided with metal");
 			GameObject burnerTouchPoint = GameObject.FindGameObjectWithTag ("touchpoint");
-			burnerTouchPoint.GetComponent<FireController> ().StartSmoke ();;
+			burnerTouchPoint.GetComponent<FireController> ().StartSmoke ();
+		} else if(other.CompareTag ("tube")){
+			Debug.Log ("Fire Collided with tube");
+			GameObject burnerTouchPoint = GameObject.FindGameObjectWithTag ("touchpoint");
+			burnerTouchPoint.GetComponent<FireController> ().StartExplosion ();
 		}
 	}
+
 }

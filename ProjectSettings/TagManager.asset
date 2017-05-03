@@ -13,6 +13,7 @@ TagManager:
   - greenboard
   - answertext
   - questiontext
+  - tube
   layers:
   - Default
   - TransparentFX
