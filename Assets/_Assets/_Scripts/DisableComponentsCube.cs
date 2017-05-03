@@ -11,7 +11,7 @@ Reason: GROOV-46
 public class DisableComponentsCube : NetworkBehaviour {
 
     private Rigidbody rb;
-    private CapsuleCollider boxCollider;
+    private BoxCollider boxCollider;
     private InteractionBehaviour ib;
     // Use this for initialization
     void Start () {
@@ -24,7 +24,7 @@ public class DisableComponentsCube : NetworkBehaviour {
 			//remove collision detection and gravity
             rb.detectCollisions = false;
             rb.useGravity = false;
-            boxCollider = GetComponent<CapsuleCollider>();
+            boxCollider = GetComponent<BoxCollider>();
 			//disable boxcollider
 			boxCollider.enabled = false;
             ib = GetComponent<InteractionBehaviour>();

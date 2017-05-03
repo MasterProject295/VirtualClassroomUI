@@ -1453,6 +1453,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a06af6d08a42a45babe289719e7d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &501264622
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501264613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.041100167, y: 0.0392452, z: 0.03700643}
+  m_Center: {x: 0.0020470435, y: 0.022684308, z: -0.00000047683716}
 --- !u!1 &510910408 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1907708351814744, guid: abd1280d95c2a224795e8c90a16e3c4d,
@@ -5658,7 +5670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 144364, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 426798, guid: 1a2afe25e45b44f46a8e7714bffe1028, type: 2}
       propertyPath: m_LocalPosition.x
