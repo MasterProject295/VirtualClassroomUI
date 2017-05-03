@@ -1390,8 +1390,8 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.04761905
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -6936,7 +6936,7 @@ MonoBehaviour:
   cup: {fileID: 510910408}
   explosionprefab: {fileID: 1500117202375138, guid: 077831a8e8645b345b192d7203fb8cdc,
     type: 2}
-  tube: {fileID: 0}
+  tube: {fileID: 501264613}
 --- !u!114 &1943818569
 MonoBehaviour:
   m_ObjectHideFlags: 0
