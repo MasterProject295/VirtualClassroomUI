@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Capsule
+  - cup
+  - Fire
+  - metal
+  - fireflame
+  - touchpoint
+  - greenboard
+  - answertext
+  - questiontext
+  - tube
   layers:
   - Default
   - TransparentFX

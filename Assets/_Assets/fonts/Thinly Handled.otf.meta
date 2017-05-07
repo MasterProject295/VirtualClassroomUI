@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: cd2b58955041b1845be144db22e168bc
+timeCreated: 1493173209
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Thinly Handled
+  fontNames:
+  - Thinly Handled
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
